@@ -118,16 +118,19 @@ const estiloCarta = () => {
     cartaEstilo.forEach(carta => {
       if (carta instanceof HTMLDivElement) {
         carta.style.cursor = "pointer";
+        
         carta.addEventListener("click", () => {
           carta.style.transform = "rotateY(180deg)";
           carta.style.transition = "transform 1s"
-        })
+        });
+
         carta.addEventListener("mouseover", () => {
           carta.style.backgroundColor = "purple"
-        })
+        });
+
         carta.addEventListener("mouseout", () => {
           carta.style.backgroundColor = "";
-        })
+        });
       }
     })
   }
